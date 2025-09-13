@@ -12,7 +12,7 @@ class DutySegment:
     status: DutyStatus
     note: str = ""
 
-
+#This is the Hours of Service class that will be used to plan the trip.
 class HOSPlanner:
     def __init__(self, start_time: datetime, cycle_hours_used: float) -> None:
         self.current_time = start_time
