@@ -1,0 +1,13 @@
+services:
+  web:
+    build: .
+    container_name: spotter_django_web
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - DJANGO_SETTINGS_MODULE=spotter_django.settings
+    command: python manage.py runserver 0.0.0.0:8000
+    restart: unless-stopped
